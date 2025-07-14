@@ -1,0 +1,6 @@
+{
+  "semiColon": true,
+  "singleQuote": false,
+  "doubleQuote": true,
+  "printWidth": 120
+}
