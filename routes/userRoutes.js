@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const rateLimit = require("express-rate-limit");
-const protect = require("../middelwares/protectionMiddleware");
-const restrictionMiddleware = require("../middelwares/restrictionMiddleware");
+const protect = require("../middlewares/protectionMiddleware");
+const restrictionMiddleware = require("../middlewares/restrictionMiddleware");
 const { signup, login, forgotPassword, resetPassword, updatePassword } = require("../controllers/authController");
 const {
   getAllUsers,
@@ -11,7 +11,7 @@ const {
   deActivateUser,
   deleteUser,
 } = require("../controllers/userController");
-const loginValidator = require("../middelwares/loginValidator");
+const loginValidator = require("../middlewares/loginValidator");
 
 const limiter = rateLimit({
   max: 3,
